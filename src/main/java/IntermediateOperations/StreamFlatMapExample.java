@@ -39,8 +39,14 @@ public class StreamFlatMapExample {
         library2.addBook(new Book("Book 3"));
         library2.addBook(new Book("Book 4"));
 
+        List<Library> listOfLibraries = new ArrayList<>();
+
+        listOfLibraries.add(library1);
+        listOfLibraries.add(library2);
+
         // Combine books from multiple libraries into a single list using flatMap
-        List<Book> allBooks = List.of(library1, library2)
+       // List<Book> allBooks = List.of(library1, library2)
+        List<Book> allBooks=listOfLibraries
                 .stream()
                 .flatMap(library -> library.getBooks().stream())
                 .collect(Collectors.toList());

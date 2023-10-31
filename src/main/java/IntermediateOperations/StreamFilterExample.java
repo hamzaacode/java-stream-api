@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 public class StreamFilterExample {
     public static void main(String[] args) {
+
+        //  Stream<T> filter(Predicate<? super T> predicate)
+
         // Create a list of numbers
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
