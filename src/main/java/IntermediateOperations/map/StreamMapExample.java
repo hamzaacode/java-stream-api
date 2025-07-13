@@ -1,4 +1,4 @@
-package IntermediateOperations;
+package IntermediateOperations.map;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,13 +28,18 @@ public class StreamMapExample {
             new Person("Charlie"),
             new Person("David")
         );
-        
+
         // Use Java streams to map names to a new list
         List<String> names = persons.stream()
             .map(Person::getName) // Using a method reference
             .collect(Collectors.toList());
-        
+
         // Print the mapped names
         names.forEach(System.out::println);
+
+        List<String> namesss=persons.stream()
+                .map(person -> person.getName())
+                .collect(Collectors.toList());
+        namesss.forEach(System.out::println);
     }
 }

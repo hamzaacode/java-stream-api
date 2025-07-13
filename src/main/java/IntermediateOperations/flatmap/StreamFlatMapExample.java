@@ -1,4 +1,4 @@
-package IntermediateOperations;
+package IntermediateOperations.flatmap;
 
 import java.util.ArrayList;
 import java.util.List;
