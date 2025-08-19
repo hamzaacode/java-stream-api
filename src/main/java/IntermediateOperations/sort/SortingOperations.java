@@ -17,5 +17,9 @@ public class SortingOperations {
         List<String> reverseSorted = names.stream()
                 .sorted((a, b) -> b.compareTo(a)) // Comparator<String>
                 .collect(Collectors.toList());
+
+      //  names.stream().sorted()
+
+
     }
 }

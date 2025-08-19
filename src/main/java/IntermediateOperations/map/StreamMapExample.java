@@ -3,7 +3,7 @@ package IntermediateOperations.map;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class Person {
+public class Person {
     private String name;
     
     public Person(String name) {
@@ -36,7 +36,7 @@ public class StreamMapExample {
 
         // Print the mapped names
         names.forEach(System.out::println);
-
+        System.out.println("------------------------");
         List<String> namesss=persons.stream()
                 .map(person -> person.getName())
                 .collect(Collectors.toList());
