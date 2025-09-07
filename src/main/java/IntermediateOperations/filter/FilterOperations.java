@@ -14,6 +14,11 @@ public class FilterOperations {
         List<String> startWithAList = list.stream()
                 .filter(s -> s.startsWith("A"))
                 .collect(Collectors.toList());
+
+        List<String> l2=Arrays.asList("Apple","Orange");
+        l2.stream()
+                .filter(s->s.length()>3)
+                .collect(Collectors.toList());
         // Long name
         List<String> lingNameList = list.stream()
                 .filter(s -> s.length() > 3)

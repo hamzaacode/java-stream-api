@@ -1,6 +1,8 @@
 package TerminalOperations;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StreamTerminalOperationsExampleWithString {
@@ -10,6 +12,7 @@ public class StreamTerminalOperationsExampleWithString {
         // Example 1: forEach - Perform an action for each element
         names.stream()
              .forEach(name -> System.out.println("Hello, " + name));
+        names.forEach(name-> System.out.println(name));
 
         // Example 2: count - Count the elements in the stream
         long count = names.stream()
@@ -43,5 +46,13 @@ public class StreamTerminalOperationsExampleWithString {
                                   .max(String::compareTo)
                                   .orElse("No names found");
         System.out.println("Longest name: " + longestName);
+
+        List<Integer> numbers = List.of(10, 40, 30, 20, 50, 50);
+
+        Optional<Integer> secondLargest = numbers.stream()
+                .distinct()                 // remove duplicates
+                .sorted(Comparator.reverseOrder()) // sort descending
+                .skip(1)                    // skip the largest
+                .findFirst();
     }
 }
